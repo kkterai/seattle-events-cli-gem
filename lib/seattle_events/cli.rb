@@ -8,20 +8,20 @@ class SeattleEvents::CLI
   end
 
   def list_events
-    @event = SeattleEvents::Events.list
+    @events = SeattleEvents::Events.list
+    @events.each.with_index(1) do |event, i|
+      puts "#{i}. #{event.date} - #{event.organization} - #{event.name}"
+    end
   end
 
   def menu
-    puts "Enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
     input = nil
     while input != "exit"
+      puts "Enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "More info on event 1"
-      when "2"
-        puts "More info on event 2"
-      when "list"
+      if input.to_i > 0
+        puts @events[input.to_i - 1]
+      elsif "list"
         list_events
       else
         puts "I don't understand your response. Please enter an event number, 'list', or 'exit'"
