@@ -20,7 +20,8 @@ class SeattleEvents::CLI
       puts "Enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
       input = gets.strip.downcase
       if input.to_i > 0
-        puts @events[input.to_i - 1]
+        the_event = @events[input.to_i - 1]
+        puts "#{i}. #{the_event.date} - #{the_event.organization} - #{the_event.name}"
       elsif "list"
         list_events
       else

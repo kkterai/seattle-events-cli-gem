@@ -3,19 +3,24 @@ class SeattleEvents::Events
   attr_accessor :date, :organization, :name
 
   def self.list
-    #It should return a bunch of instances of events
+    #scrape meetup.com and return events based on that data
+    self.scrape_events
+  end
 
-    event_1 = self.new
-    event_1.date = "Wed Sep 14"
-    event_1.organization = "Learn to Code Seattle"
-    event_1.name = "Hack the Dot Seattle #8: Back to School Edition"
+  def self.scrape_events
+    events = []
 
-    event_2 = self.new
-    event_2.date = "Wed Sep 14"
-    event_2.organization = "Code Fellows"
-    event_2.name = "Inside Scoop on getting Hired in Tech"
+    events << self.scrape_meetup
 
-    [event_1, event_2]
+    #Go to meetup, find the events
+    #Extract the events
+    #instantiate an event
+    events
+  end
+
+  def self.scrape_meetup
+    doc = Nokogiri::HTML(open("https://www.meetup.com/"))
+    binding.pry
   end
 
 end
