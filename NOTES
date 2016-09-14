@@ -1,9 +1,8 @@
 Gem CLI Steps
-(from http://guides.rubygems.org/make-your-own-gem/ and https://www.youtube.com/watch?v=_lDExWIhYKI)
+
 
 How to Build a CLI Gem
 1.	Plan your gem, imagine your interface
-  puts "Today's Learn-to-Code Calendar"
 2.	Start with the project structure
 3.	Start with the entry point – the file run
 4.	Force that to build the CLI interface
@@ -13,34 +12,11 @@ How to Build a CLI Gem
 8.	Program
 
 
-Naming & File setup
-•	http://guides.rubygems.org/patterns/#consistent-naming
-•	http://guides.rubygems.org/name-your-gem/
+A command line interface for viewing learn-to-code events in the Seattle area using Meetup.com.
 
-The ruby file (“somename.rb”)
-•	http://guides.rubygems.org/make-your-own-gem/
+Show a list of events and dates.
 
-Gemspec or Rakefile Requirements
-•	http://guides.rubygems.org/specification-reference/
-•	After you have created a gemspec, you can build a gem from it. Then you can install the generated gem locally to test it out.
+1. Wed Sep 14 - Learn to Code Seattle - "Hack the Dot Seattle #8: Back to School Edition"
+2. Wed Sep 14 - Code Fellows - "Inside Scoop on getting Hired in Tech"
 
-The final step is to require the gem and use it
-•	Setup RubyGems.org account DONE 143Coding
-•	Once this has been setup, you can push out the gem
-
-Load patterns
-•	http://guides.rubygems.org/patterns/
-•	If you’ve added more files to your gem, make sure to remember to add them to your gemspec’s files array before publishing a new gem! For this reason (among others), many developers automate this with Hoe, Jeweler, Rake, Bundler, or just a dynamic gemspec .
-
-Adding an executable
-•	Place the file in your gem’s bin directory, and then add it to the list of executables in the gemspec.
-•	The executable file itself just needs a shebang in order to figure out what program to run it with.
-•	Finally, to get Hola’s executable included when you push the gem, you’ll need to add it in the gemspec.
-
-
-Writing tests
-•	This requires adding a few more files, namely a Rakefile and a brand new test directory:
-
-o	Test::Unit is Ruby’s built-in test framework. There are lots of tutorials for using it online. There are many other test frameworks available for Ruby as well. RSpec is a popular choice.
-Documentation
-•	Mark up code for documentation ( great tutorials)
+Which event do you want to learn more about?
