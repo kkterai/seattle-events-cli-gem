@@ -2,14 +2,14 @@ Gem CLI Steps
 
 
 How to Build a CLI Gem
-1.	Plan your gem, imagine your interface
-2.	Start with the project structure
-3.	Start with the entry point – the file run
-4.	Force that to build the CLI interface
-5.	Stub out the interface
-6.	Start making things real
-7.	Discover objects
-8.	Program
+x 1.	Plan your gem, imagine your interface
+x 2.	Start with the project structure
+x 3.	Start with the entry point – the file run
+x 4.	Force that to build the CLI interface
+  5.	Stub out the interface
+  6.	Start making things real
+  7.	Discover objects
+  8.	Program
 
 
 A command line interface for viewing learn-to-code events in the Seattle area using Meetup.com.
