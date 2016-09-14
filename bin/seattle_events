@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
+require './lib/seattle_events'
+
 SeattleEvents::CLI.new.call #calls the program

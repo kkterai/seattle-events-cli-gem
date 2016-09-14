@@ -1,4 +1,5 @@
 #CLI Controller
+
 class SeattleEvents::CLI
 
   def call
