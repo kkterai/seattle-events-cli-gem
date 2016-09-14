@@ -6,7 +6,7 @@ x 1.	Plan your gem, imagine your interface
 x 2.	Start with the project structure
 x 3.	Start with the entry point – the file run
 x 4.	Force that to build the CLI interface
-  5.	Stub out the interface
+x 5.	Stub out the interface
   6.	Start making things real
   7.	Discover objects
   8.	Program
@@ -20,3 +20,11 @@ Show a list of events and dates.
 2. Wed Sep 14 - Code Fellows - "Inside Scoop on getting Hired in Tech"
 
 Which event do you want to learn more about?
+
+Q: What are the attributes of an event?
+A:  Date
+    Organization
+    Name
+    Time
+    Description
+    URL
