@@ -1,6 +1,6 @@
 class SeattleEvents::Events
 
-  attr_accessor :date, :organization, :name
+  attr_accessor :date, :name
 
   def self.list
     #scrape meetup.com and return events based on that data
@@ -19,8 +19,7 @@ class SeattleEvents::Events
   end
 
   def self.scrape_meetup
-    doc = Nokogiri::HTML(open("https://www.meetup.com/"))
-    binding.pry
+    doc = Nokogiri::HTML(open("https://www.meetup.com/Learn-Code-Seattle/events/232760029/"))
   end
 
 end
