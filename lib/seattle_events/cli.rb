@@ -21,7 +21,7 @@ class SeattleEvents::CLI
       input = gets.strip.downcase
       if input.to_i > 0
         the_event = @events[input.to_i - 1]
-        puts "#{i}. #{the_event.date} - #{the_event.name}"
+        puts "#{input}. #{the_event.date} - #{the_event.name}"
       elsif "list"
         list_events
       else
