@@ -7,9 +7,9 @@ x 2.	Start with the project structure
 x 3.	Start with the entry point – the file run
 x 4.	Force that to build the CLI interface
 x 5.	Stub out the interface
-  6.	Start making things real
-  7.	Discover objects
-  8.	Program
+x 6.	Start making things real
+x 7.	Discover objects
+x 8.	Program
 
 
 A command line interface for viewing events for the Learn to Code group in the Seattle area using Meetup.com.
