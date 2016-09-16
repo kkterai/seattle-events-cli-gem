@@ -5,7 +5,16 @@ describe SeattleEvents do
     expect(SeattleEvents::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe SeattleEvents::Events do
+  it 'is a class' do
+    expect(SeattleEvents::Events).not_to be nil
   end
+end
+
+describe SeattleEvents::CLI do
+  it 'is a class' do
+    expect(SeattleEvents::CLI).not_to be nil
+  end
+end
+
 end
