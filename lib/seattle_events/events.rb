@@ -5,7 +5,6 @@ class SeattleEvents::Events
   attr_accessor :date, :name, :time, :location, :rsvp_url
 
   def self.list
-    #scrape meetup.com and return events based on that data
     self.scrape_meetups
   end
 
@@ -19,10 +18,9 @@ class SeattleEvents::Events
       event.name = doc.search("h3.flush--bottom a span")[i].text
       event.time = doc.search("span.time")[i].text
       event.location = doc.search("dt.event-venuename")[i].text.gsub(/[\n\t]/,"")
-      event.rsvp_url = doc.search("li.rsvp-callout-outer a").attr("href").value
+      event.rsvp_url = doc.search("li.rsvp-callout-outer a")[i].attr("href")
       events << event
     end
     events
   end
-
 end

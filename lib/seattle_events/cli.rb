@@ -2,6 +2,7 @@ class SeattleEvents::CLI
 
   def call
     puts "********** Today's Events for Learn to Code Seattle **********"
+    puts ""
     list_events
     menu
     end_search
@@ -12,6 +13,7 @@ class SeattleEvents::CLI
     @events.each.with_index(1) do |event, i|
       puts "#{i}. #{event.date} - #{event.name}"
     end
+    puts ""
   end
 
   def menu
@@ -21,7 +23,17 @@ class SeattleEvents::CLI
       input = gets.strip.downcase
       if input.to_i > 0
         the_event = @events[input.to_i - 1]
-        puts "#{input}. #{the_event.date} - #{the_event.name}"
+        puts ""
+        puts "----------------------------------------------------------------------------------------------"
+        puts ""
+        puts " Event #{input}:    #{the_event.name}"
+        puts " Date:       #{the_event.date}"
+        puts " Time:       #{the_event.time}"
+        puts " Location:   #{the_event.location}"
+        puts " RSVP:       #{the_event.rsvp_url}"
+        puts ""
+        puts "----------------------------------------------------------------------------------------------"
+        puts ""
       elsif "list"
         list_events
       else
