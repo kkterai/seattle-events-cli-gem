@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Kenlyn Terai"]
   spec.email         = ["kkterai@gmail.com"]
 
-  spec.summary       = "Lists learn-to-code events in the Seattle-area."
+  spec.summary       = "Lists events for the Seattle area 'Learn to Code' group."
   spec.description   = "Using data from meetup.com, lists events for those learning to code."
   spec.homepage      = "https://github.com/kkterai/seattle-events-cli-gem"
   spec.license       = "MIT"
