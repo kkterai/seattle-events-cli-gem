@@ -25,7 +25,9 @@ class SeattleEvents::CLI
     while input != "exit"
       puts "Please enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
       input = gets.strip.downcase
-      if input.to_i <= @counter
+      if input == "list"
+        list_events
+      elsif input.to_i <= @counter
         the_event = @events[input.to_i - 1]
         puts ""
         puts "----------------------------------------------------------------------------------------------"
@@ -38,8 +40,6 @@ class SeattleEvents::CLI
         puts ""
         puts "----------------------------------------------------------------------------------------------"
         puts ""
-      elsif input == "list"
-        list_events
       elsif input.to_i >= @counter
         puts "There are no events with that number."
       else
