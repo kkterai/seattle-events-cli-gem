@@ -1,3 +1,5 @@
+require 'pry'
+
 class SeattleEvents::CLI
 
   def call
@@ -9,9 +11,11 @@ class SeattleEvents::CLI
   end
 
   def list_events
+    @counter = 1
     @events = SeattleEvents::Events.list
     @events.each.with_index(1) do |event, i|
       puts "#{i}. #{event.date} - #{event.name}"
+      @counter +=1
     end
     puts ""
   end
@@ -19,9 +23,9 @@ class SeattleEvents::CLI
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
+      puts "Please enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
       input = gets.strip.downcase
-      if input.to_i > 0
+      if input.to_i <= @counter
         the_event = @events[input.to_i - 1]
         puts ""
         puts "----------------------------------------------------------------------------------------------"
@@ -34,8 +38,10 @@ class SeattleEvents::CLI
         puts ""
         puts "----------------------------------------------------------------------------------------------"
         puts ""
-      elsif "list"
+      elsif input == "list"
         list_events
+      elsif input.to_i >= @counter
+        puts "There are no events with that number."
       else
         puts "I don't understand your response. Please enter an event number, 'list', or 'exit'"
       end

@@ -1,3 +1,4 @@
+#My environment file. Establishes all dependencies.
 require "nokogiri"
 require "open-uri"
 require "pry"

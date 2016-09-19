@@ -1,6 +1,6 @@
 # SeattleEvents
 
-This ruby gem provides a CLI to view a list of upcoming events for Galvanize's Seattle 'Learn to Code' group.
+This ruby gem provides a CLI to view a list of upcoming events for Galvanize Seattle's 'Learn to Code' group.
 
 ## Installation
 
