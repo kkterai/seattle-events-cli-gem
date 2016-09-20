@@ -1,5 +1,3 @@
-require 'pry'
-
 class SeattleEvents::CLI
 
   def call

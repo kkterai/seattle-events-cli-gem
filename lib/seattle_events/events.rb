@@ -1,5 +1,3 @@
-require 'pry'
-
 class SeattleEvents::Events
 
   attr_accessor :date, :name, :time, :location, :rsvp_url
