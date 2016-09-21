@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'seattle_events'
-  spec.version       = '0.1.0'
+  spec.version       = '1.1.2'
   spec.authors       = ["Kenlyn Terai"]
   spec.email         = 'kkterai@gmail.com'
 
