@@ -9,11 +9,11 @@ class SeattleEvents::CLI
   end
 
   def list_events
-    @counter = 0
+#    @counter = 0
     @events = SeattleEvents::Events.list
     @events.each.with_index(1) do |event, i|
       puts "#{i}. #{event.date} - #{event.name}"
-      @counter +=1
+#      @counter +=1
     end
     puts ""
   end
@@ -23,10 +23,12 @@ class SeattleEvents::CLI
     while input != "exit"
       puts "Please enter the number of the event you'd like to learn more about, 'list' if you'd like to see the event list, or 'exit':"
       input = gets.strip.downcase
-      if input == "list"
+      if input == "exit"
+        break
+      elsif input == "list"
         list_events
-      elsif input.to_i <= @counter
-        the_event = @events[input.to_i - 1]
+      elsif !@events[input.to_i-1].is_a?(NilClass)
+        the_event = @events[input.to_i-1]
         puts ""
         puts "----------------------------------------------------------------------------------------------"
         puts ""
@@ -38,7 +40,7 @@ class SeattleEvents::CLI
         puts ""
         puts "----------------------------------------------------------------------------------------------"
         puts ""
-      elsif input.to_i >= @counter
+      elsif @events[input.to_i-1].is_a?(NilClass)
         puts "There are no events with that number."
       else
         puts "I don't understand your response. Please enter an event number, 'list', or 'exit'"
