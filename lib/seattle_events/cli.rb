@@ -9,11 +9,9 @@ class SeattleEvents::CLI
   end
 
   def list_events
-#    @counter = 0
     @events = SeattleEvents::Events.list
     @events.each.with_index(1) do |event, i|
       puts "#{i}. #{event.date} - #{event.name}"
-#      @counter +=1
     end
     puts ""
   end
