@@ -9,7 +9,7 @@ class SeattleEvents::CLI
   end
 
   def list_events
-    @events = SeattleEvents::Events.list
+    @events = SeattleEvents::Events.all
     @events.each.with_index(1) do |event, i|
       puts "#{i}. #{event.date} - #{event.name}"
     end

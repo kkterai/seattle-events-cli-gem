@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "seattle_events"
+require_relative "../lib/seattle_events"
 
-SeattleEvents::CLI.new.call 
+SeattleEvents::CLI.new.call
